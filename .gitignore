@@ -132,3 +132,6 @@ dist
 .DS_Store
 docker/db/data
 package-lock.json
+
+docker/mysql/db/data
+docker/postgresql/db/data

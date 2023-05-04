@@ -1,0 +1,20 @@
+version: '3.1'
+services:
+  db:
+    image: postgres:15.2
+    container_name: postgres
+    volumes:
+      - ./db/data:/var/lib/postgresql/data
+    restart: always
+    environment:
+      - POSTGRES_USER=board
+      - POSTGRES_PASSWORD=board1!
+    ports:
+      - 5432:5432
+
+  adminer:
+    container_name: adminner
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
